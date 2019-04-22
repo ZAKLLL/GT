@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Languages">
+        <item>中文</item>
+        <item>日文</item>
+        <item>英文</item>
+        <item>韩文</item>
+        <item>法文</item>
+        <item>阿拉伯文</item>
+        <item>波兰文</item>
+        <item>丹麦文</item>
+        <item>德文</item>
+        <item>俄文</item>
+        <item>芬兰文</item>
+        <item>荷兰文</item>
+        <item>捷克文</item>
+        <item>罗马尼亚文</item>
+        <item>挪威文</item>
+        <item>葡萄牙文</item>
+        <item>瑞典文</item>
+        <item>斯洛伐克文</item>
+        <item>西班牙文</item>
+        <item>印地文</item>
+        <item>印度尼西亚文</item>
+        <item>意大利文</item>
+        <item>泰文</item>
+        <item>土耳其文</item>
+        <item>希腊文</item>
+        <item>匈牙利文</item>
+    </string-array>
+
+
+</resources>
