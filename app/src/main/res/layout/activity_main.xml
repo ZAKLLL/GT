@@ -24,7 +24,7 @@
     <EditText
         android:id="@+id/input"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="61dp"
         android:ems="10"
         android:gravity="top|left"
         android:hint="请输入您要翻译的内容"
@@ -43,7 +43,7 @@
     <EditText
         android:id="@+id/output"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="59dp"
         android:ems="10"
         android:gravity="top|left"
         android:hint="翻译结果"
@@ -60,9 +60,40 @@
             android:layout_height="36dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
             android:background="#FF8C00"
             android:text="翻译"
             android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="23dp"
+            android:background="#FF8C00"
+            android:text="添加到笔记"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/b1"
+            android:layout_marginEnd="17dp"
+            android:background="#FF8C00"
+            android:text="我的笔记"
+            android:textColor="#FFFFFF" />
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="44dp" />
+
+
     </RelativeLayout>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.hp.gt;
+package com.example.hp.gt.Util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
