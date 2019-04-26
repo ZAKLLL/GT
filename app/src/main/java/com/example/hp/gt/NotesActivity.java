@@ -49,23 +49,17 @@ public class NotesActivity extends AppCompatActivity {
                     // 先获取 name 的索引值，然后再通过索引获取字段值
                     String source = cursor.getString(cursor.getColumnIndex("source"));
                     Log.e("", "id: " + id + " source: " + source);
-
                     String s1 = cursor.getString(cursor.getColumnIndex("source"));
                     String t1 = cursor.getString(cursor.getColumnIndex("target"));
-
-
                     marked.add("From:      " + s1 + "     To      " + t1);
                 }
-
                 // 关闭光标
                 cursor.close();
             }
         }).start();
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, marked);
         listView.setAdapter(arrayAdapter);
-
     }
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -73,16 +67,15 @@ public class NotesActivity extends AppCompatActivity {
         menu.add(1, 1, 1, "删除");
         menu.add(1, 2, 2, "清空");
     }
-
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 1:
 
-                Toast.makeText(this, "msg1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "你记住了么就删删删", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
-                Toast.makeText(this, "msg2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "不允许！", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onContextItemSelected(item);

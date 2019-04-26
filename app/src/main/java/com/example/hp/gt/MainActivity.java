@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
         //数据库可视化工具
         Stetho.initializeWithDefaults(this);
-
         listView = findViewById(R.id.list_view);
         registerForContextMenu(listView);
 
@@ -65,38 +64,21 @@ public class MainActivity extends AppCompatActivity {
         final SQLiteDatabase database = helper.getWritableDatabase();
         final List<Note> notes = new ArrayList<>();
         final List<String> record = new ArrayList<>();
-
-
-
         //主界面show历史记录
         final Thread showHistoryThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 Log.e("开启", "查询历史历史记录");
-
                 Cursor cursor = database.query(SQLiteDbHelper.NOTES, new String[]{"id",
                         "source", "target"}, "ismark=?", new String[]{"0"}, null, null, "id DESC");
-
                 System.out.print(cursor.toString());
-
-                // 不断移动光标获取值
                 while (cursor.moveToNext()) {
-                    // 直接通过索引获取字段值
                     int id = cursor.getInt(0);
-                    // 先获取 name 的索引值，然后再通过索引获取字段值
                     String source = cursor.getString(cursor.getColumnIndex("source"));
                     String target = cursor.getString(cursor.getColumnIndex("target"));
-//                    Integer ismark = cursor.getInt(cursor.getColumnIndex("ismark"));
                     Log.e("", "id: " + id + " source: " + source + target + 0);
-
-//                    notes.add(new Note(source, target, 0));
-
                     record.add("From:      " + source + "     To      " + target);
-
-                    //todo 打开新界面并且传数据
                 }
-
-                // 关闭光标
                 cursor.close();
             }
         });
@@ -212,10 +194,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 1:
-                Toast.makeText(this, "msg1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "错过就没机会了！", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
-                Toast.makeText(this, "msg2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "不可以忘记历史", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onContextItemSelected(item);
